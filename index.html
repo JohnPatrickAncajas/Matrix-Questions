@@ -10,7 +10,8 @@
             background-color: #f4f4f4;
             color: #333;
             margin: 0;
-            padding: 20px;
+            padding: 1.5rem;
+            line-height: 1.5;
         }
 
         p {
@@ -24,14 +25,14 @@
         @media (min-width: 600px) {
             p {
                 padding: 20px;
-                font-size: 1.1em;
+                font-size: 1.5rem;
             }
         }
 
         @media (min-width: 900px) {
             p {
                 padding: 25px;
-                font-size: 1.2em;
+                font-size: 2rem;
             }
         }
     </style>
@@ -43,16 +44,27 @@
         }
 
         function setRandomValues() {
+            let a1 = getRandomInt(-7, 8);
+            let b1 = getRandomInt(-7, 8);
+            let c1 = getRandomInt(-7, 8);
+            let w1 = getRandomInt(-7, 8);
             let x1 = getRandomInt(-7, 8);
             let y1 = getRandomInt(-7, 8);
+            let z1 = getRandomInt(-7, 8);
+            let a2 = getRandomInt(-7, 8);
+            let b2 = getRandomInt(-7, 8);
+            let c2 = getRandomInt(-7, 8);
+            let w2 = getRandomInt(-7, 8);
             let x2 = getRandomInt(-7, 8);
             let y2 = getRandomInt(-7, 8);
+            let z2 = getRandomInt(-7, 8);
 
             document.getElementById('question1').innerHTML = 
-                `Question 1: What 1 by 2 matrix needs to be added to the current matrix to make it equal to [${x1} ${y1}]?`;
+                `Question 1: What 1 by 2 matrix needs to be added in order to bring May to [${w1} ${w2}] after a strong wind pushed her by [${a1} ${a2}] from her current position and she stumbled for [${b1} ${b2}] after moving right twice then she got teleported by [${c1} ${c2}] then she moved up twice?`;
 
             document.getElementById('question2').innerHTML = 
-                `Question 2: If [${x2} ${y2}] and [${x2} ${y2}] are added to the current matrix, would it go out of bounds?`;
+                `Question 2:  The boundaries are at -7 and 8. If [${x1} ${x2}], [${y1} ${y2}] and [${z1} ${z2}] are added to the current position of May after she moved left 11 times and down 17 times, would she go out of bounds?
+                If the answer is yes, calculate a possible 1 by 2 matrix to be added for her new position to bring her back inside the boundary.`;
         }
 
         window.onload = setRandomValues;
